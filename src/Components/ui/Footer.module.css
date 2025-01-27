@@ -1,0 +1,13 @@
+.footer{
+    bottom: 0;
+    background-color:black;
+    width: 100vw;
+    margin-top: 0;
+}
+.footer .mt-3{
+    font-size: large;
+    color: white;
+}
+.footer .container text-center{
+    display: flex;
+}

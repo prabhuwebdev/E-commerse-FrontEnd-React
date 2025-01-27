@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    overflow-x: hidden;
+    font-family: "Roboto";
+    letter-spacing: 2px;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+.btn{
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.prod{
+    letter-spacing: 4px;
+}
