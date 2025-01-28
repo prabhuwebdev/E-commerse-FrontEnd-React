@@ -91,7 +91,7 @@ const Products = ({setcartitems}) => {
         </p>
       </div>
       <div>
-        <h2 style={{ overflow: "hidden" }}>${product.price}</h2>
+        <h2 style={{ overflow: "hidden" }}>Rs : {product.price}</h2>
       </div>
       <div>
         <p>{product.description}</p>

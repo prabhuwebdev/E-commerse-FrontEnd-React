@@ -64,7 +64,7 @@ const CartItem = ({item, cartitem,setcarttotal,setcartitems,setcartitem,setnoofi
         
             <div className="ms-3 m-sm-4 text-center">
                 <p className="mb-2 overflow-hidden text-uppercase text-sm prod">{item.product.name}</p>
-                <p>${item.product.price}</p>
+                <p>Rs : {item.product.price}</p>
             </div>
             <div className="d-flex align-items-center flex-end">
                 <input className="form-control mx-4 col-12" type="number" min="1" onChange={(e)=>setquantity(e.target.value)} value={quantity}  style={{width:"60px"}}/>

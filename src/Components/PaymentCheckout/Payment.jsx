@@ -29,9 +29,9 @@ const Payment = () => {
 
                 {/* button for creditcard */}
 
-                <button className='btn mb-2 w-100' style={{backgroundColor:"#ffc300"}}>
+                {/* <button className='btn mb-2 w-100' style={{backgroundColor:"#ffc300"}}>
                     <i className='bi bi-credit-card'></i> Pay Via CreditCard
-                </button>
+                </button> */}
             </div>
         </div>
     </div>

@@ -20,7 +20,7 @@ const HomeCard = ({ product }) => {
             <p className="card-title text-center text-uppercase " style={{overflow:"hidden"}}>{product.name}</p>
           </div>
           <div className="card-footer mt-auto">
-            <p className="card-text text-center">${product.price}</p>
+            <p className="card-text text-center">Rs : {product.price}</p>
           </div>
         </div>
       </Link>
