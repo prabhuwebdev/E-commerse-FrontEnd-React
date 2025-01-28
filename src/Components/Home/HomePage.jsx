@@ -25,6 +25,7 @@ const HomePage = ({setcartitems}) => {
     })
     .catch((error)=>{
       console.log(error.message)
+      seterror(true)
     })
   
   },[])

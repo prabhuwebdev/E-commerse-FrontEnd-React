@@ -1,6 +1,6 @@
 import { useState } from "react";
 import api from "../../api";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
     const [formdata,setformdata]=useState({
