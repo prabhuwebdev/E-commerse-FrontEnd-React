@@ -1,0 +1,13 @@
+.loadingsize{
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+}

@@ -5,6 +5,7 @@ import api from "../../api"
 import { baseurl } from "../../api"
 import Similarproduct from "./Similarproduct"
 import { toast } from "react-toastify"
+import Loading from "../Loading/Loading"
 
 
 const Products = ({setcartitems}) => {
@@ -12,6 +13,7 @@ const Products = ({setcartitems}) => {
     const [product,setproduct]=useState({})
     const[similarproducts,setsimilarproducts]=useState([])
     const[incart,setincart]=useState(false)
+    const[loading,setloading]=useState(true)
     
   
     //function to create cart and add to cart
@@ -57,55 +59,69 @@ const Products = ({setcartitems}) => {
 
 
     useEffect(()=>{
+      setloading(true)
         api.get(`single-product/${slug}`)
         .then(res=>{
             console.log(res)
             console.log(res.data.similar_products)
+            // setloading(false)
             setproduct(res.data)
+            
             setsimilarproducts(res.data.similar_products)
         })
         .catch((error)=>{
             console.log(error)
         })
+        .finally(()=>{
+          setloading(false)
+        })
     
     },[slug])
   return (
-    <>
-    <div
-  className="container mb-5 mt-5 my-sm-1"
-  style={{display: "flex",justifyContent: "center",alignItems: "center",height: "100vh",overflow: "hidden",}}>
-  <div className="row mb-4 mx-3 w-100" style={{ maxWidth: "1200px" }}>
-    <div className="col-md-6 col-sm-12 mb-sm-4">
-      <img src={`${baseurl}${product.image}`}alt=""className="card-img-top img-fluid"style={{ height: "auto", maxHeight: "500px", width: "100%" }}/>
-    </div>
-    <div
-      className="col-md-6 col-sm-12 py-4 gap-lg-4"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        marginBottom: "20px",
-      }}>
-      <div>
-        <p className="card-title display-5 mb-4 m-sm-4" style={{ overflow: "hidden" }}>
-          {product.name}
-        </p>
-      </div>
-      <div>
-        <h2 style={{ overflow: "hidden" }}>Rs : {product.price}</h2>
-      </div>
-      <div>
-        <p>{product.description}</p>
-      </div>
-      <div>
-        
-        <button className="btn btn-primary bg-white text-dark" style={{border:"1px solid black"}} disabled={incart} onClick={additem}>{incart?"Product Added To Cart" :"Add To Cart"}</button>
-      </div>
-    </div>
-  </div>
-</div>
-<Similarproduct products={similarproducts}/>
-    </>
+    <div>
+    {loading? (
+            <Loading style={{height:"100px",width:"100px"}}/>
 
+    ):(
+      <>
+      <div
+      className="container mb-5 mt-5 my-sm-1"
+      style={{display: "flex",justifyContent: "center",alignItems: "center",height: "100vh",overflow: "hidden",}}>
+      <div className="row mb-4 mx-3 w-100" style={{ maxWidth: "1200px" }}>
+        <div className="col-md-6 col-sm-12 mb-sm-4">
+          <img src={`${baseurl}${product.image}`}alt=""className="card-img-top img-fluid"style={{ height: "auto", maxHeight: "500px", width: "100%" }}/>
+        </div>
+        <div
+          className="col-md-6 col-sm-12 py-4 gap-lg-4"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginBottom: "20px",
+          }}>
+          <div>
+            <p className="card-title display-5 mb-4 m-sm-4" style={{ overflow: "hidden" }}>
+              {product.name}
+            </p>
+          </div>
+          <div>
+            <h2 style={{ overflow: "hidden" }}>Rs : {product.price}</h2>
+          </div>
+          <div>
+            <p>{product.description}</p>
+          </div>
+          <div>
+            
+            <button className="btn btn-primary bg-white text-dark" style={{border:"1px solid black"}} disabled={incart} onClick={additem}>{incart?"Product Added To Cart" :"Add To Cart"}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Similarproduct products={similarproducts}/>
+    </>
+    )}
+    
+    </div>
+  
   )
 }
 
