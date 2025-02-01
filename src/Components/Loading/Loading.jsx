@@ -9,7 +9,7 @@
 // }
 
 // export default Loading
-import "./Loading.css"
+import "./loading.css"
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Loading = () => {
