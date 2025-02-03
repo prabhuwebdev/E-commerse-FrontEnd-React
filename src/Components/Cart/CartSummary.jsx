@@ -5,7 +5,7 @@ const CartSummary = ({carttotal,tax}) => {
     
     const Total=(carttotal+tax).toFixed(2)
   return (
-    <div className="col-md-4  overflow-hidden" style={{border:"1px solid black", borderRadius:"5px"}}>
+    <div className="col-md-3  overflow-hidden">
         <div className="cart-summary overflow-hidden">
             <div className="mb-3">
                 <h4 className="text-center p-3">Cart Summary</h4>
