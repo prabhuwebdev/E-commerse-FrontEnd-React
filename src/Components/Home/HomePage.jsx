@@ -42,7 +42,7 @@ const HomePage = ({setcartitems}) => {
         <Header />
         {/* {error? <Error />:<CardContainer products={products} />} */}
         {isloading?(
-          <div className="container d-flex align-items-center justify-content-center overflow-hidden" style={{marginTop:"calc(80px + 1rem)",height:"100vh"}}>
+          <div className="container d-flex align-items-center justify-content-center overflow-hidden" style={{marginTop:"calc(80px + 1rem)",height:"60vh"}}>
             <Loading className="container d-flex align-items-center justify-content-center" />
           </div>
           
