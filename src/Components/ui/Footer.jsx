@@ -1,12 +1,14 @@
 import { FaInstagram,FaFacebook,FaTwitterSquare } from "react-icons/fa"
 import styles from './Footer.module.css'
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
     <footer className={`${styles.footer}`}>
         <div className="container text-center">
             <div className="mb-4 pt-3">
-                <a href="#" className=" text-decoration-none text-white fw-bold mx-4">Home</a>
+                {/* <a href="#" className=" text-decoration-none text-white fw-bold mx-4">Home</a> */}
+                <Link to="/" className=" text-decoration-none text-white fw-bold mx-4">Home</Link>
                 <a href="#" className=" text-decoration-none text-white fw-bold mx-4">About</a>
                 <a href="#" className=" text-decoration-none text-white fw-bold mx-4 ">Contact Us</a>
             </div>

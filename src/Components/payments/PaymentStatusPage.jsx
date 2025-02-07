@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import { useState,useEffect } from "react"
 import api from "../../api"
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import "./success.css"
 
 const PaymentStatusPage = ({setcartitems}) => {
   const [messages,setmessages]=useState("")
@@ -27,20 +29,59 @@ const PaymentStatusPage = ({setcartitems}) => {
       }      
   },[])
 
-  return (
-    <div className=" vh-100 d-flex  justify-content-center align-items-center" style={{backgroundColor:"#7161ef"}}>
-        <div className="text-center">
-            <h1 className="overflow-hidden mb-5 display-4 fw-bold text-white">{messages}</h1>
-            <h3 className="overflow-hidden mb-4 text-white">{submessages}</h3>
-            <span>
-                <Link to="/userprofile"><button className="btn btn-lg-md bg-white text-balck p-2 mx-3 " style={{border:"1px solid black"}}>View Order Details</button></Link>
-                <Link to="/"><button className="btn btn-lg-md bg-white text-balck p-2 mx-3 " style={{border:"1px solid black"}}>Back To CheckOut Page</button></Link>
 
-            </span>
+
+
+
+  if(messages === "Payment Successfull"){
+    return (
+      <div className="vh-100 mt-">
+        <div className="container-fluid d-flex align-items-center justify-content-center">
+        <DotLottieReact
+        src="https://lottie.host/c60fb93d-568a-420d-a324-5558bf7299b2/IpRRzVvf2s.lottie"
+        loop
+        autoplay
+        className="lottie"
+      />
         </div>
-
-    </div>
-  )
-}
+        <div className="text-center">
+          <h1 className="overflow-hidden mb-5 display-5 fw-bold text-black">{messages}</h1>
+          <h3 className="overflow-hidden mb-4 text-black">{submessages}</h3>
+        </div>
+        <div className="my-3 d-flex align-items-center justify-content-center">
+          <span>
+            <Link to="/userprofile"><button className="btn btn-lg-md text-balck p-2 mx-3 " style={{border:"1px solid black"}}>View Order Details</button></Link>
+            <Link to="/"><button className="btn btn-lg-md text-balck p-2 mx-3 " style={{border:"1px solid black"}}>Back To Home</button></Link>
+          </span>
+        </div>
+      </div>
+    )
+  }
+  else{
+    return (
+      <div className="vh-100 mt-">
+        <div className="container-fluid d-flex align-items-center justify-content-center">
+        <DotLottieReact
+      src="https://lottie.host/3ca39d15-9721-4c8a-83f0-4feb1dc192cb/cCpgU2kXZ0.lottie"
+      loop
+      autoplay
+      className="lottie1"
+    />
+        </div>
+        <div className="text-center">
+          <h1 className="overflow-hidden mb-5 display-5 fw-bold text-black">{messages}</h1>
+          <h3 className="overflow-hidden mb-4 text-black">{submessages}</h3>
+        </div>
+        <div className="my-3 d-flex align-items-center justify-content-center">
+          <span>
+            <Link to="/userprofile"><button className="btn btn-lg-md text-balck p-2 mx-3 " style={{border:"1px solid black"}}>View Order Details</button></Link>
+            <Link to="/"><button className="btn btn-lg-md text-balck p-2 mx-3 " style={{border:"1px solid black"}}>Back To Home</button></Link>
+          </span>
+        </div>
+      </div>
+    )
+  }
+  }
+  
 
 export default PaymentStatusPage

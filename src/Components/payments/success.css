@@ -1,0 +1,36 @@
+
+.lottie {
+    width: 70%; /* Take 90% of the container width */
+    max-width: 300px; /* Restrict size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center align */
+    display: block; /* Remove inline scroll behavior */
+    overflow: hidden; /* Hide any overflow */
+}
+
+/* For larger screens (laptops and desktops) */
+@media (min-width: 1024px) {
+    .lottie {
+        
+        height: 400px;
+        width: 700px;
+    }
+}
+
+
+.lottie1 {
+    width: 70%; /* Take 90% of the container width */
+    max-width: 300px; /* Restrict size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center align */
+    display: block; /* Remove inline scroll behavior */
+    overflow: hidden; /* Hide any overflow */
+}
+
+@media (min-width: 1024px) {
+    .lottie1 {
+        
+        height: 400px;
+        width: 700px;
+    }
+}
