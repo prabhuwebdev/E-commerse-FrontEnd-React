@@ -47,7 +47,7 @@ const HomePage = ({setcartitems}) => {
           </div>
           
         ):error?(
-          <Error/>
+          <Error className=" my-1"/>
         ):
         <CardContainer products={products} />
 
