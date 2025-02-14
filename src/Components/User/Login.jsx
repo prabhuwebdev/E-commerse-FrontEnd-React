@@ -70,7 +70,7 @@ const SubmitInfo=(e)=>{
                     Login
                   </h2>
                   <p className="mb-4" style={{ fontSize: "0.9rem" }}>
-                    Please enter your UserName and password!
+                    Please enter your UserName
                   </p>
   
                   <div data-mdb-input-init className="form-outline mb-3">
@@ -80,7 +80,7 @@ const SubmitInfo=(e)=>{
                       value={username}
                       onChange={(e) => setusername(e.target.value)}
                       className="form-control form-control-sm text-center p-2"
-                      placeholder="Username or E-Mail"
+                      placeholder="Username"
                       style={{ fontSize: "0.85rem" }}
                     />
                   </div>

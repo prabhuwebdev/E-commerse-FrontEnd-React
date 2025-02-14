@@ -19,7 +19,7 @@ const Footer = () => {
             <a href="#" className="text-white fw-bold mx-2"style={{fontSize:"28px"}}><FaTwitterSquare /></a>  
             </div>
             <div  className="py-2 fw-bold">
-            <p style={{color:"white"}}>&copy2024 Shopitty</p>
+            <p style={{color:"white"}}>&copy;2024 BuyHive</p>
             </div>
             
 
