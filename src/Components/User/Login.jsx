@@ -70,7 +70,7 @@ const SubmitInfo=(e)=>{
                     Login
                   </h2>
                   <p className="mb-4" style={{ fontSize: "0.9rem" }}>
-                    Please enter your UserName
+                    Please enter your UserName and Password
                   </p>
   
                   <div data-mdb-input-init className="form-outline mb-3">
